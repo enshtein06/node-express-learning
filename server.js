@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 let app = express();
 
 //partial piece of website, that i can use in my website
@@ -70,6 +72,6 @@ app.get('/bad', (req, res) => {
 });
 
 //listen port 3000 of localhost
-app.listen(3000, () => {
-	console.log('Server in up on port 3000')
+app.listen(port, () => {
+	console.log(`Server in up on port ${port}`)
 });
